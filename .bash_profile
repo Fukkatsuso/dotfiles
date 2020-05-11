@@ -1,10 +1,15 @@
+# .bashrc読み込み
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi
+
 export PATH="/usr/local/git/bin:$PATH"
 export PATH="/usr/local/opt/curl/bin:$PATH"
 export PATH="$HOME/.nodebrew/current/bin:$PATH"
 
 export PROMPT_COMMAND="history -a"
 
-alias ls='ls -FG'
+export PS1="\[\e[32m\]\h\[\e[m\]\[\e[37m\]:\[\e[m\]\[\e[34m\]\w\[\e[m\]\[\e[36m\]\`parse_git_branch\`\[\e[m\]\\$ "
 
 # rbenv
 if [ -d ~/.rbenv ]; then
@@ -38,17 +43,5 @@ if [ -d ~/.pyenv ]; then
   export PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init -)"
 fi
-
-# get current branch in git repo
-function parse_git_branch() {
-	BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
-	if [ ! "$BRANCH" == "" ]; then
-		echo "($BRANCH)"
-	else
-		echo ""
-	fi
-}
-
-export PS1="\[\e[32m\]\h\[\e[m\]\[\e[37m\]:\[\e[m\]\[\e[34m\]\w\[\e[m\]\[\e[36m\]\`parse_git_branch\`\[\e[m\]\\$ "
 
 pokemon
