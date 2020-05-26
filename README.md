@@ -18,6 +18,7 @@ $ mkdir dirname && cd dirname
 $ git clone https://github.com/Fukkatsuso/dotfiles.git
 $ cd dotfiles
 $ sh init.sh
+$ sh install.sh
 ```
 
 <!-- iterm2設定 -->
