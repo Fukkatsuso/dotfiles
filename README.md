@@ -8,8 +8,8 @@
 ├── .bash_profile
 ├── .bashrc
 ├── README.md 
-├── init.sh 
-└── install.sh 
+├── init.sh     # 一番最初に実行
+└── install.sh  # インストール
 ```
 
 ## 使い方
