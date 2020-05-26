@@ -44,4 +44,6 @@ if [ -d ~/.pyenv ]; then
   eval "$(pyenv init -)"
 fi
 
-pokemon
+if type "pokemon" > /dev/null 2>&1; then
+  pokemon
+fi
