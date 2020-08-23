@@ -1,0 +1,235 @@
+{
+	"Default code": {
+		"prefix": "template",
+		"body": [
+			"package main",
+			"",
+			"import (",
+			"\t\"bufio\"",
+			"\t\"fmt\"",
+			"\t\"os\"",
+			"\t\"strconv\"",
+			")",
+			"",
+			"const (",
+				"\tinitialBufSize = 100000",
+				"\tmaxBufSize     = 10000000",
+			")",
+			"",
+			"var (",
+				"\tsc = bufio.NewScanner(os.Stdin)",
+				"\twt = bufio.NewWriter(os.Stdout)",
+			")",
+			"",
+			"func next() string {",
+				"\tsc.Scan()",
+				"\treturn sc.Text()",
+			"}",
+			"",
+			"func nextInt() int {",
+				"\ti, _ := strconv.Atoi(next())",
+				"\treturn i",
+			"}",
+			"",
+			"func nextInt2() (int, int) {",
+				"\treturn nextInt(), nextInt()",
+			"}",
+			"",
+			"func nextInt3() (int, int, int) {",
+				"\treturn nextInt(), nextInt(), nextInt()",
+			"}",
+			"",
+			"func nextInt4() (int, int, int, int) {",
+				"\treturn nextInt(), nextInt(), nextInt(), nextInt()",
+			"}",
+			"",
+			"func nextInts(n int) []int {",
+				"\tslice := make([]int, n)",
+				"\tfor i := 0; i < n; i++ {",
+					"\t\tslice[i] = nextInt()",
+				"\t}",
+				"\treturn slice",
+			"}",
+			"",
+			"func nextFloat64() float64 {",
+				"\tf, _ := strconv.ParseFloat(next(), 64)",
+				"\treturn f",
+			"}",
+			"",
+			"func nextFloat64s(n int) []float64 {",
+				"\tslice := make([]float64, n)",
+				"\tfor i := 0; i < n; i++ {",
+					"\t\tslice[i] = nextFloat64()",
+				"\t}",
+				"\treturn slice",
+			"}",
+			"",
+			"func putf(format string, a ...interface{}) {",
+				"\tfmt.Fprintf(wt, format, a...)",
+			"}",
+			"",
+			"func puts(a ...interface{}) {",
+				"\tfmt.Fprintln(wt, a...)",
+			"}",
+			"",
+			"func main() {",
+				"\tsc.Split(bufio.ScanWords)",
+				"\tsc.Buffer(make([]byte, initialBufSize), maxBufSize)",
+				"\tdefer wt.Flush()",
+				"",
+				"\t$1",
+			"}",
+			""
+		]
+	},
+	"Abs int": {
+		"prefix": "absFuncInt",
+		"body": [
+			"func abs(x int) int {",
+				"\tif x < 0 {",
+					"\t\treturn -x",
+				"\t}",
+				"\treturn x",
+			"}"
+		]
+	},
+	"Digits sum": {
+		"prefix": "digitsSumFunc",
+		"body": [
+			"func digitsSum(n int) int {",
+				"\tret := 0",
+				"\tfor n > 0 {",
+					"\t\tret += n % 10",
+					"\t\tn /= 10",
+				"\t}",
+				"\treturn ret",
+			"}"
+		]
+	},
+	"Distance": {
+		"prefix": "distFunc",
+		"body": [
+			"func dist(x1, y1, x2, y2 int) float64 {",
+				"\tdx := float64(x1 - x2)",
+				"\tdy := float64(y1 - y2)",
+				"\treturn math.Sqrt(dx*dx + dy*dy)",
+			"}"
+		]
+	},
+	"Division floored": {
+		"prefix": "divFloorFunc",
+		"body": [
+			"func divFloor(a, b int) int {",
+				"\treturn (a + (b - 1)) / b",
+			"}"
+		]
+	},
+	"GCD": {
+		"prefix": "gcdFunc",
+		"body": [
+			"func gcd(a, b int) int {",
+				"\tif b == 0 {",
+					"\t\treturn a",
+				"\t}",
+				"\tfor a%b != 0 {",
+					"\t\ta, b = b, a%b",
+				"\t}",
+				"\treturn b",
+			"}"
+		]
+	},
+	"Is prime": {
+		"prefix": "isPrimeFunc",
+		"body": [
+			"func isPrime(x int) bool {",
+				"\tif x == 1 {",
+					"\t\treturn false",
+				"\t}",
+				"\tn := int(math.Sqrt(float64(x)))",
+				"\tfor i := 2; i <= n; i++ {",
+					"\t\tif x%i == 0 {",
+						"\t\t\treturn false",
+					"\t\t}",
+				"\t}",
+				"\treturn true",
+			"}"
+		]
+	},
+	"LCM": {
+		"prefix": "lcmFunc",
+		"body": [
+			"func lcm(a, b int) int {",
+				"\treturn a / gcd(a, b) * b",
+			"}"
+		]
+	},
+	"Max int": {
+		"prefix": "maxFuncInt",
+		"body": [
+			"func max(nums ...int) int {",
+				"\tret := nums[0]",
+				"\tfor _, v := range nums {",
+					"\t\tif v > ret {",
+						"\t\t\tret = v",
+					"\t\t}",
+				"\t}",
+				"\treturn ret",
+			"}"
+		]
+	},
+	"Min int": {
+		"prefix": "minFuncInt",
+		"body": [
+			"func min(nums ...int) int {",
+				"\tret := nums[0]",
+				"\tfor _, v := range nums {",
+					"\t\tif v < ret {",
+						"\t\t\tret = v",
+					"\t\t}",
+				"\t}",
+				"\treturn ret",
+			"}"
+		]
+	},
+	"Pow": {
+		"prefix": "powFunc",
+		"body": [
+			"func pow(a, n int) int {",
+				"\tret := 1",
+				"\tfor n > 0 {",
+					"\t\tif n&1 == 1 {",
+						"\t\t\tret *= a",
+					"\t\t}",
+					"\t\ta *= a",
+					"\t\tn >>= 1",
+				"\t}",
+				"\treturn ret",
+			"}"
+		]
+	},
+	"Reverse string": {
+		"prefix": "reverseStringFunc",
+		"body": [
+			"func reverseString(s string) string {",
+				"\tn := len(s)",
+				"\tbytes := []byte(s)",
+				"\tfor i := 0; i < n/2; i++ {",
+					"\t\tbytes[i], bytes[n-1-i] = bytes[n-1-i], bytes[i]",
+				"\t}",
+				"\treturn string(bytes)",
+			"}"
+		]
+	},
+	"Sum int": {
+		"prefix": "sumFuncInt",
+		"body": [
+			"func sum(a ...int) int {",
+				"\tret := 0",
+				"\tfor _, v := range a {",
+					"\t\tret += v",
+				"\t}",
+				"\treturn ret",
+			"}"
+		]
+	}
+}
