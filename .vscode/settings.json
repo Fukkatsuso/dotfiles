@@ -1,0 +1,41 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "[ruby]": {
+        "editor.tabSize": 2
+    },
+    "[vue]": {
+        "editor.tabSize": 2
+    },
+    "[markdown]": {
+        "editor.tabSize": 2
+    },
+    "go.gopath": "${env:GOPATH}",
+    "go.toolsGopath": "${env:GOPATH}",
+    "vsicons.dontShowNewVersionMessage": true,
+    "latex-workshop.latex.tools": [
+        {
+            "name": "ptex2pdf",
+            "command": "ptex2pdf",
+            "args": [
+                "-l",
+                "-ot",
+                "-kanji=utf8 -synctex=1",
+                "%DOCFILE%.tex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+    {
+        "name": "toolchain",
+        "tools": [
+            "ptex2pdf"
+        ]
+    }],
+    "latex-workshop.message.log.show": true,
+    "latex-workshop.message.badbox.show": true,
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.latex.autoBuild.run": "onFileChange",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "editor.renderControlCharacters": true,
+    "editor.wordWrap": "on"
+}
