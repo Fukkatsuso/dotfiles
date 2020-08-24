@@ -4,24 +4,23 @@
 
 ## ファイル構成
 ```sh
-tree -a -L 2 -I ".git|.gitignore|.gitmodules"
-. 
+tree -a -L 2 -I ".git|.gitignore|README.md"
+.
 ├── .bash_profile
 ├── .bashrc
 ├── .gitconfig
-├── .iterm2
-│   ├── Iceberg-iTerm2
-│   ├── com.googlecode.iterm2.plist
-│   └── init.sh
-├── .vscode
-│   ├── init.sh
-│   ├── install.sh
-│   ├── settings.json
-│   ├── snippets
-│   └── vscode_extensions
-├── README.md
-├── init.sh     # 一番最初に実行
-└── install.sh  # インストール
+├── init.sh
+├── install.sh
+├── iterm2
+│   ├── com.googlecode.iterm2.plist
+│   ├── iceberg.itermcolors
+│   └── init.sh
+└── vscode
+    ├── init.sh
+    ├── install.sh
+    ├── settings.json
+    ├── snippets
+    └── vscode_extensions
 ```
 
 ## 使い方
