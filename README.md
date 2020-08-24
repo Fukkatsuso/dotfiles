@@ -4,11 +4,15 @@
 
 ## ファイル構成
 ```sh
-tree -a -L 2 -I ".git|.gitignore"
+tree -a -L 2 -I ".git|.gitignore|.gitmodules"
 . 
 ├── .bash_profile
 ├── .bashrc
 ├── .gitconfig
+├── .iterm2
+│   ├── Iceberg-iTerm2
+│   ├── com.googlecode.iterm2.plist
+│   └── init.sh
 ├── .vscode
 │   ├── init.sh
 │   ├── install.sh
@@ -25,8 +29,6 @@ tree -a -L 2 -I ".git|.gitignore"
 mkdir ~/mydev && cd ~/mydev
 git clone https://github.com/Fukkatsuso/dotfiles.git
 cd dotfiles
-sh init.sh
-sh install.sh
+bash init.sh
+bash install.sh
 ```
-
-<!-- iterm2設定 -->
