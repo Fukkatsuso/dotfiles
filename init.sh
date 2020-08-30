@@ -2,13 +2,10 @@
 
 CURRENT_DIR=$(cd $(dirname $0); pwd)
 
-git submodule init
-git submodule update
-
-for f in .??*
-do
-  [[ $f == ".git" ]] && continue
-  [[ $f == ".gitignore" ]] && continue
-  [[ $f == ".DS_Store" ]] && continue
-  ln -s $CURRENT_DIR/$f ~
+for f in \
+	".bash_profile" \
+	".bashrc" \
+	".gitconfig"; do
+  echo "symbolic link: $f"
+	ln -fs $CURRENT_DIR/$f ~
 done
