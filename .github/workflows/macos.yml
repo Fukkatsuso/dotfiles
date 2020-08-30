@@ -1,0 +1,21 @@
+name: MacOS
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  macos-test:
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: setup
+        run: |
+          bash init.sh
+          bash install.sh
+          bash iterm2/init.sh
+          bash vscode/init.sh
+          bash vscode/install.sh
+          bash macos.sh
