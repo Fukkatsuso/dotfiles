@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -ue
+
 function has() {
   type "$1" > /dev/null 2>&1
 }
@@ -18,7 +20,7 @@ fi
 echo "Updating Homebrew..."
 brew update && brew upgrade
 
-echo "Installing applications"
+echo "Installing applications..."
 brew install git
 brew install curl
 brew install wget
