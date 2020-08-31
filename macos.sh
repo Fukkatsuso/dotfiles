@@ -81,5 +81,5 @@ for app in \
 	"Finder" \
 	"Safari" \
 	"SystemUIServer"; do
-	killall "${app}" &> /dev/null
+	killall "$app" &> /dev/null
 done
