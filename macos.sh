@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -ue
+
 # Dock
 ## 自動的に隠す
 defaults write com.apple.dock autohide -bool true
