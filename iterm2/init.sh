@@ -1,5 +1,7 @@
 #!/bin/bash
 
-CURRENT_DIR=$(cd $(dirname $0); pwd)
+set -ue
 
-ln -fs $CURRENT_DIR/com.googlecode.iterm2.plist ~/Library/Preferences
+CURRENT_DIR=$(cd "$(dirname "$0")"; pwd)
+
+ln -fs "$CURRENT_DIR/com.googlecode.iterm2.plist" ~/Library/Preferences
