@@ -1,4 +1,5 @@
 # dotfiles
+[![lint](https://github.com/Fukkatsuso/dotfiles/workflows/lint/badge.svg)](https://github.com/Fukkatsuso/dotfiles/actions?query=workflow%3Alint)
 [![macOS](https://github.com/Fukkatsuso/dotfiles/workflows/macOS/badge.svg)](https://github.com/Fukkatsuso/dotfiles/actions?query=workflow%3AmacOS)
 
 設定ファイルの管理
