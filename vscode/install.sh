@@ -1,8 +1,10 @@
 #!/bin/bash
 
-CURRENT_DIR=$(cd $(dirname $0); pwd)
+set -ue
 
-cat $CURRENT_DIR/vscode_extensions | while read line
+CURRENT_DIR=$(cd "$(dirname "$0")"; pwd)
+
+while read -r line
 do
-  code --install-extension $line
-done
+  code --install-extension "$line"
+done < "$CURRENT_DIR/vscode_extensions"
