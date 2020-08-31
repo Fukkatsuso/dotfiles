@@ -1,4 +1,5 @@
 # dotfiles
+[![macOS](https://github.com/Fukkatsuso/dotfiles/workflows/macOS/badge.svg)](https://github.com/Fukkatsuso/dotfiles/actions?query=workflow%3AmacOS)
 
 設定ファイルの管理
 
@@ -9,12 +10,15 @@ tree -a -L 2 -I ".git|.gitignore|README.md"
 ├── .bash_profile
 ├── .bashrc
 ├── .gitconfig
+├── .github
+│   └── workflows
 ├── init.sh
 ├── install.sh
 ├── iterm2
-│   ├── com.googlecode.iterm2.plist
-│   ├── iceberg.itermcolors
-│   └── init.sh
+│   ├── com.googlecode.iterm2.plist
+│   ├── iceberg.itermcolors
+│   └── init.sh
+├── macos.sh
 └── vscode
     ├── init.sh
     ├── install.sh
