@@ -27,7 +27,7 @@ defaults write com.apple.finder ShowPathbar -bool true
 ## 起動時に前回開いたファイルを開かない
 defaults write com.apple.QuickTimePlayerX NSQuitAlwaysKeepsWindows -bool false
 
-# TouchBar
+# トラックパッド
 ## タップでクリックを有効化
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
