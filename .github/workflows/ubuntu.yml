@@ -1,4 +1,4 @@
-name: Ubntu
+name: Ubuntu
 
 on:
   push:
@@ -7,6 +7,8 @@ on:
       - '!README.md'
       - '!.gitignore'
       - '!macos/**'
+      - '!.github/workflows/**'
+      - '.github/workflows/ubuntu.yml'
 
 jobs:
   ubuntu-test:
