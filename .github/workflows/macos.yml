@@ -16,8 +16,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: bash init.sh
-      - run: bash install.sh
+      - run: bash macos/init.sh
+      - run: bash macos/install.sh
       - run: bash iterm2/init.sh
       - run: bash vscode/init.sh
       - run: bash vscode/install.sh
-      - run: bash macos.sh
+      - run: bash macos/macos.sh

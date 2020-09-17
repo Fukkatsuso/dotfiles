@@ -2,6 +2,8 @@
 
 set -ue
 
+CURRENT_DIR=$(cd "$(dirname "$0")"; pwd)
+
 function has() {
   type "$1" > /dev/null 2>&1
 }
@@ -21,21 +23,15 @@ echo "Updating Homebrew..."
 brew update && brew upgrade
 
 echo "Installing applications..."
-brew install git
-brew install curl
-brew install wget
-brew install tree
-brew install shellcheck
-brew cask install google-chrome
-brew cask install google-japanese-ime
-brew cask install iterm2
-brew cask install visual-studio-code
-brew cask install docker
-brew cask install virtualbox
-brew cask install postman
-brew cask install ngrok
-brew cask install slack
-brew cask install skype
-brew cask install mactex
+# brew
+while read -r line
+do
+  brew install "$line"
+done < "$CURRENT_DIR/brew"
+# brew cask
+while read -r line
+do
+  brew cask install "$line"
+done < "$CURRENT_DIR/brew_cask"
 
 source ~/.bash_profile
