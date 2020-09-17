@@ -19,7 +19,12 @@ tree -a -L 2 -I ".git|.gitignore|README.md"
 │   ├── com.googlecode.iterm2.plist
 │   ├── iceberg.itermcolors
 │   └── init.sh
-├── macos.sh
+├── macos
+│   ├── brew
+│   ├── brew_cask
+│   ├── defaults.sh
+│   ├── init.sh
+│   └── install.sh
 └── vscode
     ├── init.sh
     ├── install.sh
@@ -29,10 +34,12 @@ tree -a -L 2 -I ".git|.gitignore|README.md"
 ```
 
 ## 使い方
+## macOS
 ```sh
 mkdir ~/mydev && cd ~/mydev
 git clone https://github.com/Fukkatsuso/dotfiles.git
 cd dotfiles
 bash init.sh
-bash install.sh
+bash macos/init.sh
+bash macos/install.sh
 ```
