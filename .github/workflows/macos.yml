@@ -2,12 +2,11 @@ name: macOS
 
 on:
   push:
-    branches:
-      - master
     paths:
       - '**'
       - '!README.md'
       - '!.gitignore'
+      - '!ubuntu/**'
 
 jobs:
   macos-test:
