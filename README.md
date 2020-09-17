@@ -1,8 +1,9 @@
 # dotfiles
 [![lint](https://github.com/Fukkatsuso/dotfiles/workflows/lint/badge.svg)](https://github.com/Fukkatsuso/dotfiles/actions?query=workflow%3Alint)
 [![macOS](https://github.com/Fukkatsuso/dotfiles/workflows/macOS/badge.svg)](https://github.com/Fukkatsuso/dotfiles/actions?query=workflow%3AmacOS)
+[![Ubuntu](https://github.com/Fukkatsuso/dotfiles/workflows/Ubuntu/badge.svg)](https://github.com/Fukkatsuso/dotfiles/actions?query=workflow%3AUbuntu)
 
-設定ファイルの管理
+設定ファイルの管理とアプリのインストール
 
 ## ファイル構成
 ```sh
@@ -14,7 +15,6 @@ tree -a -L 2 -I ".git|.gitignore|README.md"
 ├── .github
 │   └── workflows
 ├── init.sh
-├── install.sh
 ├── iterm2
 │   ├── com.googlecode.iterm2.plist
 │   ├── iceberg.itermcolors
@@ -23,6 +23,9 @@ tree -a -L 2 -I ".git|.gitignore|README.md"
 │   ├── brew
 │   ├── brew_cask
 │   ├── defaults.sh
+│   ├── init.sh
+│   └── install.sh
+├── ubuntu
 │   ├── init.sh
 │   └── install.sh
 └── vscode
@@ -36,10 +39,20 @@ tree -a -L 2 -I ".git|.gitignore|README.md"
 ## 使い方
 ## macOS
 ```sh
-mkdir ~/mydev && cd ~/mydev
+cd ~
 git clone https://github.com/Fukkatsuso/dotfiles.git
 cd dotfiles
 bash init.sh
 bash macos/init.sh
 bash macos/install.sh
+```
+
+## Ubuntu
+```sh
+cd ~
+git clone https://github.com/Fukkatsuso/dotfiles.git
+cd dotfiles
+bash init.sh
+bash ubuntu/init.sh
+bash ubuntu/install.sh
 ```
