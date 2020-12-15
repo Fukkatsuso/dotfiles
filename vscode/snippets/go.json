@@ -116,10 +116,10 @@
 			"}"
 		]
 	},
-	"Division floored": {
-		"prefix": "divFloorFunc",
+	"Division ceiled": {
+		"prefix": "divCeilFunc",
 		"body": [
-			"func divFloor(a, b int) int {",
+			"func divCeil(a, b int) int {",
 				"\treturn (a + (b - 1)) / b",
 			"}"
 		]
