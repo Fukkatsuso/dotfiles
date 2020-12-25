@@ -5,3 +5,6 @@
 [url "github:"]
 	InsteadOf = https://github.com
 	InsteadOf = git@github.com:
+
+[includeIf "gitdir:~/mydev/intern/AIoT/"]
+	path = ~/mydev/dotfiles/.gitconfig-work
