@@ -23,15 +23,9 @@ echo "Updating Homebrew..."
 brew update && brew upgrade
 
 echo "Installing applications..."
-# brew
 while read -r line
 do
   brew install "$line"
 done < "$CURRENT_DIR/brew"
-# brew cask
-while read -r line
-do
-  brew cask install "$line"
-done < "$CURRENT_DIR/brew_cask"
 
 source ~/.bash_profile
