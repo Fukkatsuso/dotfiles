@@ -14,9 +14,7 @@ if has "brew"; then
   echo "Homebrew is already installed"
 else
   echo "Installing Homebrew..."
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  echo "Installing Homebrew-cask..."
-  brew install cask
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 echo "Updating Homebrew..."
@@ -27,5 +25,9 @@ while read -r line
 do
   brew install "$line"
 done < "$CURRENT_DIR/brew"
+while read -r line
+do
+  brew install --cask "$line"
+done < "$CURRENT_DIR/brew_cask"
 
 source ~/.bash_profile
