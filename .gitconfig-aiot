@@ -1,0 +1,6 @@
+[user]
+    name = mutsuro
+    email = mutsuro@ai-ot.com
+
+[remote "origin"]
+    url = git@mutsuro-ai-ot.bitbucket.org:mutsuro

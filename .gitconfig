@@ -7,4 +7,4 @@
 	InsteadOf = git@github.com:
 
 [includeIf "gitdir:~/mydev/intern/AIoT/"]
-	path = ~/.gitconfig-work
+	path = ~/.gitconfig-aiot
