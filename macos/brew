@@ -3,7 +3,6 @@ git
 shellcheck
 tree
 wget
-
 docker
 google-chrome
 google-japanese-ime
