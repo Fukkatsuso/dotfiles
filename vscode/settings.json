@@ -7,10 +7,20 @@
         "editor.tabSize": 2
     },
     "[markdown]": {
+        "editor.tabSize": 2,
+        "editor.quickSuggestions": true,
+        "editor.snippetSuggestions": "top"
+    },
+    "[python]": {
+        "editor.insertSpaces": false,
         "editor.tabSize": 2
     },
     "go.gopath": "${env:GOPATH}",
     "go.toolsGopath": "${env:GOPATH}",
+    "gopls": {
+        // https://github.com/golang/tools/blob/master/gopls/doc/settings.md
+        "build.experimentalWorkspaceModule": true
+    },
     "vsicons.dontShowNewVersionMessage": true,
     "latex-workshop.latex.tools": [
         {
@@ -22,15 +32,28 @@
                 "-kanji=utf8 -synctex=1",
                 "%DOCFILE%.tex"
             ]
+        },
+        {
+            "command": "pbibtex",
+            "name": "pbibtex",
+            "args": [
+                "%DOCFILE%", 
+                "-kanji=utf8"
+            ]
         }
     ],
     "latex-workshop.latex.recipes": [
-    {
-        "name": "toolchain",
-        "tools": [
-            "ptex2pdf"
-        ]
-    }],
+        {
+            "name": "toolchain",
+            "tools": [
+                "ptex2pdf",
+                // 卒論・修論を書くときにコメントアウト外す
+                // "pbibtex",
+                // "ptex2pdf",
+                "ptex2pdf"
+            ]
+        }
+    ],
     "latex-workshop.message.log.show": true,
     "latex-workshop.message.badbox.show": true,
     "latex-workshop.latex.autoClean.run": "onBuilt",
