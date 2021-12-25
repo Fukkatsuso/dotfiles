@@ -30,4 +30,9 @@ do
   brew install --cask "$line"
 done < "$CURRENT_DIR/brew_cask"
 
+echo "Set PATH of code"
+cat << EOF >> ~/.bash_profile
+export PATH="$PATH:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin"
+EOF
+
 source ~/.bash_profile
