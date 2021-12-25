@@ -38,9 +38,10 @@ if [ -d ~/.jenv ]; then
 fi
 
 # pyenv
-if [ -d ~/.pyenv ]; then
+if command -v pyenv 1>/dev/null 2>&1; then
   export PYENV_ROOT="$HOME/.pyenv"
   export PATH="$PYENV_ROOT/bin:$PATH"
+  export PATH="$PYENV_ROOT/shims:$PATH"
   eval "$(pyenv init -)"
 fi
 
