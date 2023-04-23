@@ -45,27 +45,6 @@ defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 ## 日付と時刻のフォーマット
 defaults write com.apple.menuextra.clock DateFormat -string "M\u6708d\u65e5(EEE)  H:mm"
 
-# Safari
-## 検索クエリをAppleに送信しない
-defaults write com.apple.Safari UniversalSearchEnabled -bool false
-defaults write com.apple.Safari SuppressSearchSuggestions -bool true
-## ダウンロードしたファイルを自動で開かない
-defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
-## 追跡を無効化
-defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
-## DevelopメニューとWebインスペクタを有効化
-defaults write com.apple.Safari IncludeDevelopMenu -bool true
-defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
-## contextメニューを追加
-defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
-## spellcheckingを有効化
-defaults write com.apple.Safari WebContinuousSpellCheckingEnabled -bool true
-## オートコレクトを無効化
-defaults write com.apple.Safari WebAutomaticSpellingCorrectionEnabled -bool false
-## 不正なサイトの警告
-defaults write com.apple.Safari WarnAboutFraudulentWebsites -bool true
-
 # Other
 ## 拡張子を常に表示
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true

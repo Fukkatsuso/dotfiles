@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 set -ue
 
@@ -8,7 +8,7 @@ function has() {
   type "$1" > /dev/null 2>&1
 }
 
-source ~/.bash_profile
+source ~/.zlogin
 
 if has "brew"; then
   echo "Homebrew is already installed"
@@ -30,4 +30,4 @@ do
   brew install --cask "$line"
 done < "$CURRENT_DIR/brew_cask"
 
-source ~/.bash_profile
+source ~/.zlogin

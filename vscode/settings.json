@@ -8,7 +8,11 @@
     },
     "[markdown]": {
         "editor.tabSize": 2,
-        "editor.quickSuggestions": true,
+        "editor.quickSuggestions": {
+            "comments": "on",
+            "strings": "on",
+            "other": "on"
+        },
         "editor.snippetSuggestions": "top"
     },
     "[python]": {
@@ -60,5 +64,6 @@
     "latex-workshop.latex.autoBuild.run": "onFileChange",
     "latex-workshop.view.pdf.viewer": "tab",
     "editor.renderControlCharacters": true,
-    "editor.wordWrap": "on"
+    "editor.wordWrap": "on",
+    "window.zoomLevel": 1
 }
