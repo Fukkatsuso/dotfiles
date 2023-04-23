@@ -41,7 +41,7 @@ $ zsh install.sh
 ```zsh
 $ cd iterm2
 
-# 設定ファイルをシンボリックリンクで配置
+# 設定ファイルをコピーして配置
 $ zsh init.sh
 ```
 
