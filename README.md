@@ -41,7 +41,7 @@ $ zsh install.sh
 ```zsh
 $ cd iterm2
 
-# 設定ファイルをコピーして配置
+# 設定ファイルをコピーしておく（設定の引き継ぎ）
 $ zsh init.sh
 ```
 
