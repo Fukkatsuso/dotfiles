@@ -16,7 +16,7 @@
         "editor.snippetSuggestions": "top"
     },
     "[python]": {
-        "editor.insertSpaces": false,
+        "editor.insertSpaces": true,
         "editor.tabSize": 2
     },
     "go.gopath": "${env:GOPATH}",
@@ -26,43 +26,6 @@
         "build.experimentalWorkspaceModule": true
     },
     "vsicons.dontShowNewVersionMessage": true,
-    "latex-workshop.latex.tools": [
-        {
-            "name": "ptex2pdf",
-            "command": "ptex2pdf",
-            "args": [
-                "-l",
-                "-ot",
-                "-kanji=utf8 -synctex=1",
-                "%DOCFILE%.tex"
-            ]
-        },
-        {
-            "command": "pbibtex",
-            "name": "pbibtex",
-            "args": [
-                "%DOCFILE%", 
-                "-kanji=utf8"
-            ]
-        }
-    ],
-    "latex-workshop.latex.recipes": [
-        {
-            "name": "toolchain",
-            "tools": [
-                "ptex2pdf",
-                // 卒論・修論を書くときにコメントアウト外す
-                // "pbibtex",
-                // "ptex2pdf",
-                "ptex2pdf"
-            ]
-        }
-    ],
-    "latex-workshop.message.log.show": true,
-    "latex-workshop.message.badbox.show": true,
-    "latex-workshop.latex.autoClean.run": "onBuilt",
-    "latex-workshop.latex.autoBuild.run": "onFileChange",
-    "latex-workshop.view.pdf.viewer": "tab",
     "editor.renderControlCharacters": true,
     "editor.wordWrap": "on",
     "window.zoomLevel": 1
