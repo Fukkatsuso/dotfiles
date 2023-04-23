@@ -46,4 +46,5 @@ $ zsh init.sh
 ```
 
 - iterm2の General > Preferences で、iterm2ディレクトリをLoad&Saveするように設定
+- iterm2を再起動
 - iterm2でよしなに設定
