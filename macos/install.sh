@@ -21,13 +21,6 @@ echo "Updating Homebrew..."
 brew update && brew upgrade
 
 echo "Installing applications..."
-while read -r line
-do
-  brew install "$line"
-done < "$CURRENT_DIR/brew"
-while read -r line
-do
-  brew install --cask "$line"
-done < "$CURRENT_DIR/brew_cask"
+brew bundle --file "$CURRENT_DIR/Brewfile"
 
 source ~/.zlogin
