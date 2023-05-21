@@ -18,3 +18,37 @@ function git_branch() {
 }
 
 PS1='%F{green}%n%f:%F{blue}%~%f%F{cyan}$(git_branch)%f$ '
+
+# fnm
+eval "$(fnm env --use-on-cd)"
+
+# asdf
+. /usr/local/opt/asdf/libexec/asdf.sh
+
+export GOROOT="$(go env GOROOT)"
+export GOPATH="$(go env GOPATH)"
+export PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
+
+# https://github.com/kennyp/asdf-golang/pull/56
+asdf_update_golang_env() {
+	local go_root
+	go_root="$(asdf where golang)"
+	# GOROOT
+	if [[ -n "${go_root}/go" ]]; then
+		export GOROOT="${go_root}/go"
+		# PATHが通っていなければ追加する
+		if [[ ! "$PATH" =~ .*"$GOROOT".* ]]; then
+			export PATH="$PATH:$GOROOT/bin"
+		fi
+	fi
+	# GOPATH
+	if [[ -n "${go_root}/packages" ]]; then
+		export GOPATH="${go_root}/packages"
+		# PATHが通っていなければ追加する
+		if [[ ! "$PATH" =~ .*"$GOPATH".* ]]; then
+			export PATH="$PATH:$GOPATH/bin"
+		fi
+	fi
+}
+autoload -U add-zsh-hook
+add-zsh-hook chpwd asdf_update_golang_env
