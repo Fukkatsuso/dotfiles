@@ -21,3 +21,5 @@ hediet.vscode-drawio
 EditorConfig.EditorConfig
 mhutchie.git-graph
 HashiCorp.terraform
+ms-vscode-remote.remote-containers
+esbenp.prettier-vscode

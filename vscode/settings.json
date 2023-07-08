@@ -17,16 +17,14 @@
     },
     "[python]": {
         "editor.insertSpaces": true,
-        "editor.tabSize": 2
+        "editor.tabSize": 2,
+        "editor.formatOnType": true
     },
-    "go.gopath": "${env:GOPATH}",
-    "go.toolsGopath": "${env:GOPATH}",
-    "gopls": {
-        // https://github.com/golang/tools/blob/master/gopls/doc/settings.md
-        "build.experimentalWorkspaceModule": true
-    },
+    "go.toolsManagement.autoUpdate": true,
     "vsicons.dontShowNewVersionMessage": true,
     "editor.renderControlCharacters": true,
     "editor.wordWrap": "on",
+    "git.openRepositoryInParentFolders": "never",
     "window.zoomLevel": 1
 }
+
