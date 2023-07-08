@@ -42,3 +42,25 @@ endif
 set nobackup
 set noundofile
 
+" 検索
+set smartcase " 小文字で検索するとき大文字小文字の区別をしない
+set incsearch " インクリメンタル検索：最初の文字を入力した時点で検索が開始
+set wrapscan " 検索が最後に到達したら最初に戻る
+set hlsearch " 検索結果をハイライト
+nmap <Esc><Esc> :nohlsearch<Enter>
+
+" 表示
+set listchars=tab:^\ ,trail:~ " 行末スペースを可視化
+set showmatch " 対応するカッコを強調表示
+set number
+set cursorline
+set title
+set laststatus=2 " ステータス行を表示
+set wildmenu " コマンドの候補リストを表示
+syntax enable
+
+" 入力
+set fenc=utf-8
+set clipboard+=unnamed " クリップボードを有効化
+set autoindent " 自動インデント
+set smartindent " 改行時のインデントをいい感じに調整する
