@@ -52,3 +52,7 @@ asdf_update_golang_env() {
 }
 autoload -U add-zsh-hook
 add-zsh-hook chpwd asdf_update_golang_env
+
+# python
+export PATH="$PATH:$HOME/Library/Python/3.9/bin"
+
