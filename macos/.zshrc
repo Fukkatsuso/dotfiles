@@ -21,6 +21,7 @@ PS1='%F{green}%n%f:%F{blue}%~%f%F{cyan}$(git_branch)%f$ '
 
 # fnm
 eval "$(fnm env --use-on-cd)"
+export NODEMODULES_GLOBAL_PATH="$(npm root -g)"
 
 # asdf
 . /usr/local/opt/asdf/libexec/asdf.sh

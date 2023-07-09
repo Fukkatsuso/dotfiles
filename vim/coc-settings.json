@@ -1,0 +1,35 @@
+{
+	"languageserver": {
+		"golang": {
+			"command": "gopls",
+			"rootPatterns": [
+				"go.mod"
+			],
+			"filetypes": [
+				"go"
+			]
+		},
+		"dockerfile": {
+			"command": "docker-langserver",
+			"filetypes": [
+				"dockerfile"
+			],
+			"args": [
+				"--stdio"
+			]
+		},
+		"sql": {
+			"module": "$NODEMODULES_GLOBAL_PATH/sql-language-server/dist/bin/cli.js",
+			"args": [
+				"up",
+				"--method",
+				"node-ipc"
+			],
+			"filetypes": [
+				"sql",
+				"mysql"
+			]
+		}
+	},
+	"coc.preferences.formatOnSave": true
+}
