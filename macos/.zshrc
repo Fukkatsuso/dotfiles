@@ -23,15 +23,21 @@ PS1='%F{green}%n%f:%F{blue}%~%f%F{cyan}$(git_branch)%f$ '
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # fnm
-eval "$(fnm env --use-on-cd)"
-export NODEMODULES_GLOBAL_PATH="$(npm root -g)"
+if has "fnm"; then
+	eval "$(fnm env --use-on-cd)"
+	export NODEMODULES_GLOBAL_PATH="$(npm root -g)"
+fi
 
 # asdf
-. /usr/local/opt/asdf/libexec/asdf.sh
+if has "asdf"; then
+	. /usr/local/opt/asdf/libexec/asdf.sh
+fi
 
-export GOROOT="$(go env GOROOT)"
-export GOPATH="$(go env GOPATH)"
-export PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
+if has "go"; then
+	export GOROOT="$(go env GOROOT)"
+	export GOPATH="$(go env GOPATH)"
+	export PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
+fi
 
 # https://github.com/kennyp/asdf-golang/pull/56
 asdf_update_golang_env() {
