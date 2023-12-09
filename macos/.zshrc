@@ -19,6 +19,9 @@ function git_branch() {
 
 PS1='%F{green}%n%f:%F{blue}%~%f%F{cyan}$(git_branch)%f$ '
 
+# brew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # fnm
 eval "$(fnm env --use-on-cd)"
 export NODEMODULES_GLOBAL_PATH="$(npm root -g)"
