@@ -15,8 +15,7 @@ jobs:
     runs-on: ubuntu-18.04
 
     steps:
-      - uses: actions/checkout@v2
-      - run: bash init.sh
+      - uses: actions/checkout@v4
       - run: bash ubuntu/init.sh
       - run: bash ubuntu/install.sh
       - run: bash vscode/init.sh

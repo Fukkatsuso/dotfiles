@@ -1,6 +1,0 @@
-[user]
-	email = fukkatsuso.git+github@gmail.com
-	name = Fukkatsuso
-
-[includeIf "gitdir:~/mydev/intern/AIoT/"]
-	path = ~/.gitconfig-aiot
