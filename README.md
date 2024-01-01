@@ -1,8 +1,8 @@
 # dotfiles
 
-[![lint](https://github.com/Fukkatsuso/dotfiles/workflows/lint/badge.svg)](https://github.com/Fukkatsuso/dotfiles/actions?query=workflow%3Alint)
-[![macOS](https://github.com/Fukkatsuso/dotfiles/workflows/macOS/badge.svg)](https://github.com/Fukkatsuso/dotfiles/actions?query=workflow%3AmacOS)
-[![Ubuntu](https://github.com/Fukkatsuso/dotfiles/workflows/Ubuntu/badge.svg)](https://github.com/Fukkatsuso/dotfiles/actions?query=workflow%3AUbuntu)
+[![lint](https://github.com/Fukkatsuso/dotfiles/actions/workflows/lint.yml/badge.svg)](https://github.com/Fukkatsuso/dotfiles/actions/workflows/lint.yml)
+[![macOS](https://github.com/Fukkatsuso/dotfiles/actions/workflows/macos.yml/badge.svg)](https://github.com/Fukkatsuso/dotfiles/actions/workflows/macos.yml)
+[![Ubuntu](https://github.com/Fukkatsuso/dotfiles/actions/workflows/ubuntu.yml/badge.svg)](https://github.com/Fukkatsuso/dotfiles/actions/workflows/ubuntu.yml)
 
 設定ファイルの管理とアプリのインストール
 
