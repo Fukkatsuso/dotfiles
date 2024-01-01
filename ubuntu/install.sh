@@ -12,7 +12,6 @@ sudo apt -y install \
   git \
   shellcheck \
   software-properties-common \
-  texlive-full \
   tree \
   wget
 
