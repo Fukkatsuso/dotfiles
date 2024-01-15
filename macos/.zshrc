@@ -17,6 +17,10 @@ function git_branch() {
 	fi
 }
 
+function has() {
+  type "$1" > /dev/null 2>&1
+}
+
 PS1='%F{green}%n%f:%F{blue}%~%f%F{cyan}$(git_branch)%f$ '
 
 # brew
@@ -30,7 +34,7 @@ fi
 
 # asdf
 if has "asdf"; then
-	. /usr/local/opt/asdf/libexec/asdf.sh
+	. $(brew --prefix asdf)/libexec/asdf.sh
 fi
 
 if has "go"; then
