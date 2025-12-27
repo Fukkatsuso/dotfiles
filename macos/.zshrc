@@ -1,5 +1,6 @@
 alias ls='ls -FG'
 
+# shell completion
 autoload -Uz compinit
 compinit
 autoload -U +X bashcompinit && bashcompinit
@@ -10,7 +11,6 @@ precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
 zstyle ':vcs_info:git:*' formats '%b'
-
 # get current branch in git repo
 function git_branch() {
 	BRANCH=$vcs_info_msg_0_
@@ -21,14 +21,14 @@ function git_branch() {
 	fi
 }
 
+PS1='%F{green}%n%f:%F{blue}%~%f%F{cyan}$(git_branch)%f$ '
+
+# homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 function has() {
   type "$1" > /dev/null 2>&1
 }
-
-PS1='%F{green}%n%f:%F{blue}%~%f%F{cyan}$(git_branch)%f$ '
-
-# brew
-eval "$(/usr/local/bin/brew shellenv)"
 
 # fnm
 if has "fnm"; then
@@ -38,9 +38,10 @@ fi
 
 # asdf
 if has "asdf"; then
-	. /usr/local/opt/asdf/libexec/asdf.sh
+	. /opt/homebrew/opt/asdf/libexec/asdf.sh
 fi
 
+# go
 if has "go"; then
 	export GOROOT="$(go env GOROOT)"
 	export GOPATH="$(go env GOPATH)"
@@ -74,8 +75,12 @@ add-zsh-hook chpwd asdf_update_golang_env
 # python
 export PATH="$PATH:$HOME/Library/Python/3.9/bin"
 
+# terraform
 complete -o nospace -C /usr/local/bin/terraform terraform
 
-if type "pokemon" > /dev/null 2>&1; then
+# kubectl
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+
+if has "pokemon"; then
   pokemon
 fi

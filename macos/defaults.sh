@@ -3,8 +3,8 @@
 set -ue
 
 # Dock
-## 自動的に隠す
-defaults write com.apple.dock autohide -bool true
+## 自動的に隠さない
+defaults write com.apple.dock autohide -bool false
 ## 表示を高速化
 defaults write com.apple.dock autohide-time-modifier -int 0.1
 defaults write com.apple.Dock autohide-delay -float 0
