@@ -37,9 +37,7 @@ if has "fnm"; then
 fi
 
 # asdf
-if has "asdf"; then
-	. /opt/homebrew/opt/asdf/libexec/asdf.sh
-fi
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 # go
 if has "go"; then
@@ -79,7 +77,20 @@ export PATH="$PATH:$HOME/Library/Python/3.9/bin"
 complete -o nospace -C /usr/local/bin/terraform terraform
 
 # kubectl
-[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+[[ $commands[kubectl] ]] && \
+  source <(kubectl completion zsh) && \
+  alias k=kubectl && \
+  alias kx=kubectx && \
+  alias kn=kubens
+# kube-ps1
+[[ $commands[kubectl] ]] && \
+  export KUBE_PS1_HIDE_IF_NOCONTEXT=true && \
+  source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh" && \
+  kubeoff -g &&
+  PS1='$(kube_ps1)'$PS1
+
+# claude
+export PATH="$HOME/.local/bin:$PATH"
 
 if has "pokemon"; then
   pokemon
